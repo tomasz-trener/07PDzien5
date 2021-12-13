@@ -101,5 +101,10 @@ namespace P05AplikacjaZawodnicy
             FrmTrener frmTrener = new FrmTrener(t);
             frmTrener.Show();
         }
+
+        private void btnTrenerzy_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

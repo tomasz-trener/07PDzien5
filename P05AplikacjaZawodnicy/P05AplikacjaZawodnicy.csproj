@@ -49,6 +49,12 @@
   <ItemGroup>
     <Compile Include="Domain\Trener.cs" />
     <Compile Include="Domain\Zawodnik.cs" />
+    <Compile Include="FrmTrenerzy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTrenerzy.Designer.cs">
+      <DependentUpon>FrmTrenerzy.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmZawodnicy.cs">
       <SubType>Form</SubType>
     </Compile>

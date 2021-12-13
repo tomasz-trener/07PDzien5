@@ -47,6 +47,7 @@ namespace P05AplikacjaZawodnicy
             this.label6 = new System.Windows.Forms.Label();
             this.dtpDataUr = new System.Windows.Forms.DateTimePicker();
             this.btnTrener = new System.Windows.Forms.Button();
+            this.btnTrenerzy = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbDane
@@ -205,11 +206,22 @@ namespace P05AplikacjaZawodnicy
             this.btnTrener.UseVisualStyleBackColor = true;
             this.btnTrener.Click += new System.EventHandler(this.btnTrener_Click);
             // 
+            // btnTrenerzy
+            // 
+            this.btnTrenerzy.Location = new System.Drawing.Point(485, 12);
+            this.btnTrenerzy.Name = "btnTrenerzy";
+            this.btnTrenerzy.Size = new System.Drawing.Size(68, 58);
+            this.btnTrenerzy.TabIndex = 19;
+            this.btnTrenerzy.Text = "Formularz trenerzy";
+            this.btnTrenerzy.UseVisualStyleBackColor = true;
+            this.btnTrenerzy.Click += new System.EventHandler(this.btnTrenerzy_Click);
+            // 
             // FrmZawodnicy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(640, 282);
+            this.Controls.Add(this.btnTrenerzy);
             this.Controls.Add(this.btnTrener);
             this.Controls.Add(this.dtpDataUr);
             this.Controls.Add(this.txtWzrost);
@@ -255,6 +267,7 @@ namespace P05AplikacjaZawodnicy
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker dtpDataUr;
         private System.Windows.Forms.Button btnTrener;
+        private System.Windows.Forms.Button btnTrenerzy;
     }
 }
 

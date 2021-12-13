@@ -26,6 +26,7 @@ namespace P02PolaczenieZBaza
                 Console.WriteLine(string.Join(" ", wynik[i]));
 
             Console.ReadKey();
+            //https://github.com/tomasz-trener/07PDzien5
         }
     }
 }

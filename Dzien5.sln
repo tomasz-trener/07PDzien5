@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P01KomunikacjaZBaza", "P01K
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P02PolaczenieZBaza", "P02PolaczenieZBaza\P02PolaczenieZBaza.csproj", "{E5149F5C-BB9E-4DDA-9C45-34A998BB5E59}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P03RepozytoriumZawodnicy", "P03RepozytoriumZawodnicy\P03RepozytoriumZawodnicy.csproj", "{67D7B06C-91A6-451D-B4A8-A90D4CAF34B2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{E5149F5C-BB9E-4DDA-9C45-34A998BB5E59}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E5149F5C-BB9E-4DDA-9C45-34A998BB5E59}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E5149F5C-BB9E-4DDA-9C45-34A998BB5E59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67D7B06C-91A6-451D-B4A8-A90D4CAF34B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67D7B06C-91A6-451D-B4A8-A90D4CAF34B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67D7B06C-91A6-451D-B4A8-A90D4CAF34B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67D7B06C-91A6-451D-B4A8-A90D4CAF34B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

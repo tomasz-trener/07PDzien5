@@ -10,6 +10,16 @@ namespace P03RepozytoriumZawodnicy
     {
         static void Main(string[] args)
         {
+            ZawodnicyRepository zr = new ZawodnicyRepository();
+
+            Zawodnik[] zawodnicy = zr.PobierzZawodnikow();
+
+            for (int i = 0; i < zawodnicy.Length; i++)
+            {
+                Console.WriteLine(zawodnicy[i].PrzedstawSie());
+            }
+
+            Console.ReadKey();
         }
     }
 }

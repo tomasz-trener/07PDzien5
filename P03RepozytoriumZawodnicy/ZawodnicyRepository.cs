@@ -9,13 +9,13 @@ namespace P03RepozytoriumZawodnicy
     class ZawodnicyRepository
     {
 
-        Zawodnik[] PobierzZawodnikow()
+       public Zawodnik[] PobierzZawodnikow()
         {
             PolaczenieZBaza pzb = new PolaczenieZBaza();
 
             object[][] wynik = 
                 pzb.
-                WykonajPoleceniSQL("SELECT id_zawodnika, id_trenera, imie, nazwisko, kraj, data_ur,data_ur, wzrost,waga  FROM zawodnicy");
+                WykonajPoleceniSQL("SELECT id_zawodnika, id_trenera, imie, nazwisko, kraj,data_ur, wzrost,waga FROM zawodnicy");
 
             Zawodnik[] zawodnicy = new Zawodnik[wynik.Length];
             for (int i = 0; i < wynik.Length; i++)
@@ -23,7 +23,13 @@ namespace P03RepozytoriumZawodnicy
                 Zawodnik z = new Zawodnik();
 
                 z.Id_zawodnika = (int)wynik[i][0];
-                z.Id_trenera = (int)wynik[i][1];
+
+                if (wynik[i][1] == DBNull.Value)
+                    z.Id_trenera = null;
+                else
+                    z.Id_trenera = (int)wynik[i][1];
+               
+                
                 z.Imie = (string)wynik[i][2];
                 z.Nazwisko = (string)wynik[i][3];
                 z.Kraj = (string)wynik[i][4];

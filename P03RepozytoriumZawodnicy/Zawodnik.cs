@@ -9,7 +9,7 @@ namespace P03RepozytoriumZawodnicy
     class Zawodnik
     {
         public int Id_zawodnika;
-        public int Id_trenera;
+        public int? Id_trenera;
         public string Imie { get; set; }
         public string Nazwisko;
         public string Kraj;

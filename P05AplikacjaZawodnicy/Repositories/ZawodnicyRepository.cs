@@ -1,6 +1,7 @@
 ﻿using P05AplikacjaZawodnicy.Domain;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,8 +10,9 @@ namespace P05AplikacjaZawodnicy.Repositories
 {
     class ZawodnicyRepository
     {
-        string connString = "Data Source=.\\sqlexpress;Initial Catalog=a_zawodnicy;integrated security=true";
+        //string connString = "Data Source=.\\sqlexpress;Initial Catalog=a_zawodnicy;integrated security=true";
 
+        string connString = ConfigurationManager.ConnectionStrings["polaczenieZBaza"].ConnectionString;
 
         private Zawodnik[] MapujZawodnikow(object[][] tabela)
         {
@@ -61,7 +63,30 @@ namespace P05AplikacjaZawodnicy.Repositories
             return MapujZawodnikow(wynik)[0];
         }
 
+        public void DodajZawodnika(Zawodnik z)
+        {
+            PolaczenieZBaza pzb = new PolaczenieZBaza(connString);
+            string sql = "insert into zawodnicy (imie, nazwisko,kraj,data_ur,wzrost,waga) values " +
+                string.Format("('{0}','{1}','{2}','{3}',{4},{5})",
+                z.Imie, z.Nazwisko, z.Kraj, z.DataUr, z.Wzrost, z.Waga);
+            pzb.WykonajPoleceniSQL(sql);
+        }
 
+        public void EdytujZawodnika(Zawodnik z)
+        {
+            PolaczenieZBaza pzb = new PolaczenieZBaza(connString);
+            string sql = string.Format("update zawodnicy set imie = '{0}', nazwisko = '{1}' ,kraj = '{2}' ,data_ur = '{3}', wzrost={4},waga={5} where id_zawodnika={6}",
+                z.Imie, z.Nazwisko, z.Kraj, z.DataUr, z.Wzrost, z.Waga, z.Id_zawodnika);
+            pzb.WykonajPoleceniSQL(sql);
+        }
+
+        public void UsunZawodnika(int id)
+        {
+            PolaczenieZBaza pzb = new PolaczenieZBaza(connString);
+            string sql = string.Format("delete zawodnicy where id_zawodnika={0}",
+                id);
+            pzb.WykonajPoleceniSQL(sql);
+        }
 
     }
 }

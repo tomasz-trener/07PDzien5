@@ -75,6 +75,7 @@ namespace P05AplikacjaZawodnicy
             this.btnDodaj.TabIndex = 2;
             this.btnDodaj.Text = "Dodaj";
             this.btnDodaj.UseVisualStyleBackColor = true;
+            this.btnDodaj.Click += new System.EventHandler(this.btnDodaj_Click);
             // 
             // btnEdytuj
             // 
@@ -84,6 +85,7 @@ namespace P05AplikacjaZawodnicy
             this.btnEdytuj.TabIndex = 3;
             this.btnEdytuj.Text = "Edytuj";
             this.btnEdytuj.UseVisualStyleBackColor = true;
+            this.btnEdytuj.Click += new System.EventHandler(this.btnEdytuj_Click);
             // 
             // btnUsun
             // 
@@ -93,6 +95,7 @@ namespace P05AplikacjaZawodnicy
             this.btnUsun.TabIndex = 4;
             this.btnUsun.Text = "Usuń";
             this.btnUsun.UseVisualStyleBackColor = true;
+            this.btnUsun.Click += new System.EventHandler(this.btnUsun_Click);
             // 
             // label1
             // 

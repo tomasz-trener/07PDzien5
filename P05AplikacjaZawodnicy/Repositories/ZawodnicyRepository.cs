@@ -9,43 +9,59 @@ namespace P05AplikacjaZawodnicy.Repositories
 {
     class ZawodnicyRepository
     {
+        string connString = "Data Source=.\\sqlexpress;Initial Catalog=a_zawodnicy;integrated security=true";
 
-       public Zawodnik[] PobierzZawodnikow()
+
+        private Zawodnik[] MapujZawodnikow(object[][] tabela)
         {
-            string connString = "Data Source=.\\sqlexpress;Initial Catalog=a_zawodnicy;integrated security=true";
+            Zawodnik[] zawodnicy = new Zawodnik[tabela.Length];
+            for (int i = 0; i < tabela.Length; i++)
+            {
+                Zawodnik z = new Zawodnik();
 
+                z.Id_zawodnika = (int)tabela[i][0];
+
+                if (tabela[i][1] == DBNull.Value)
+                    z.Id_trenera = null;
+                else
+                    z.Id_trenera = (int)tabela[i][1];
+
+
+                z.Imie = (string)tabela[i][2];
+                z.Nazwisko = (string)tabela[i][3];
+                z.Kraj = (string)tabela[i][4];
+                z.DataUr = (DateTime)tabela[i][5];
+                z.Wzrost = (int)tabela[i][6];
+                z.Waga = (int)tabela[i][7];
+
+                zawodnicy[i] = z;
+            }
+            return zawodnicy;
+        }
+
+        public Zawodnik[] PobierzZawodnikow()
+        {
             PolaczenieZBaza pzb = new PolaczenieZBaza(connString);
 
             object[][] wynik = 
                 pzb.
                 WykonajPoleceniSQL("SELECT id_zawodnika, id_trenera, imie, nazwisko, kraj,data_ur, wzrost,waga FROM zawodnicy");
 
-            Zawodnik[] zawodnicy = new Zawodnik[wynik.Length];
-            for (int i = 0; i < wynik.Length; i++)
-            {
-                Zawodnik z = new Zawodnik();
-
-                z.Id_zawodnika = (int)wynik[i][0];
-
-                if (wynik[i][1] == DBNull.Value)
-                    z.Id_trenera = null;
-                else
-                    z.Id_trenera = (int)wynik[i][1];
-               
-                
-                z.Imie = (string)wynik[i][2];
-                z.Nazwisko = (string)wynik[i][3];
-                z.Kraj = (string)wynik[i][4];
-                z.DataUr = (DateTime)wynik[i][5];
-                z.Wzrost = (int)wynik[i][6];
-                z.Waga = (int)wynik[i][7];
-
-                zawodnicy[i] =z;
-            }
-            return zawodnicy;
-
-        
+            return MapujZawodnikow(wynik);                 
         }
+
+        public Zawodnik PobierzZawodnika(int id)
+        {
+            PolaczenieZBaza pzb = new PolaczenieZBaza(connString);
+
+            object[][] wynik =
+                pzb.
+                WykonajPoleceniSQL($"SELECT id_zawodnika, id_trenera, imie, nazwisko, kraj,data_ur, wzrost,waga FROM zawodnicy where id_zawodnika={id}");
+
+            return MapujZawodnikow(wynik)[0];
+        }
+
+
 
     }
 }

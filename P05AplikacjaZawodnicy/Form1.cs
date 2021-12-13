@@ -1,4 +1,5 @@
-﻿using P05AplikacjaZawodnicy.Repositories;
+﻿using P05AplikacjaZawodnicy.Domain;
+using P05AplikacjaZawodnicy.Repositories;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,6 +24,23 @@ namespace P05AplikacjaZawodnicy
             ZawodnicyRepository zr = new ZawodnicyRepository();
             lbDane.DataSource = zr.PobierzZawodnikow();
             lbDane.DisplayMember = "ImieNazwisko";
+        }
+
+        private void lbDane_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Zawodnik zaznaczony = (Zawodnik)lbDane.SelectedItem;
+
+
+            ZawodnicyRepository zr = new ZawodnicyRepository();
+            Zawodnik z =  zr.PobierzZawodnika(zaznaczony.Id_zawodnika);
+
+            txtImie.Text = z.Imie;
+            txtNazwisko.Text = z.Nazwisko;
+            txtKraj.Text = z.Kraj;
+            dtpDataUr.Value = z.DataUr;
+            txtWaga.Text = Convert.ToString(z.Waga);
+            txtWzrost.Text = Convert.ToString(z.Wzrost);
+
         }
     }
 }

@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P04AplikacjaOkienkowa", "P0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P05AplikacjaZawodnicy", "P05AplikacjaZawodnicy\P05AplikacjaZawodnicy.csproj", "{976C2492-E6D6-420B-BE61-DE5528FDD043}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P06ObslugaFormularzy", "P06ObslugaFormularzy\P06ObslugaFormularzy.csproj", "{B3B879C2-0636-4059-BB82-AB77E563B89E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{976C2492-E6D6-420B-BE61-DE5528FDD043}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{976C2492-E6D6-420B-BE61-DE5528FDD043}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{976C2492-E6D6-420B-BE61-DE5528FDD043}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3B879C2-0636-4059-BB82-AB77E563B89E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3B879C2-0636-4059-BB82-AB77E563B89E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3B879C2-0636-4059-BB82-AB77E563B89E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3B879C2-0636-4059-BB82-AB77E563B89E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

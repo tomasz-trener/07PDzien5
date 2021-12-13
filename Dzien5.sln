@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P02PolaczenieZBaza", "P02Po
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P03RepozytoriumZawodnicy", "P03RepozytoriumZawodnicy\P03RepozytoriumZawodnicy.csproj", "{67D7B06C-91A6-451D-B4A8-A90D4CAF34B2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P04AplikacjaOkienkowa", "P04AplikacjaOkienkowa\P04AplikacjaOkienkowa.csproj", "{C0ED5F5E-246D-4D28-9FC8-44C0AE993F62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P05AplikacjaZawodnicy", "P05AplikacjaZawodnicy\P05AplikacjaZawodnicy.csproj", "{976C2492-E6D6-420B-BE61-DE5528FDD043}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{67D7B06C-91A6-451D-B4A8-A90D4CAF34B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67D7B06C-91A6-451D-B4A8-A90D4CAF34B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67D7B06C-91A6-451D-B4A8-A90D4CAF34B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0ED5F5E-246D-4D28-9FC8-44C0AE993F62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0ED5F5E-246D-4D28-9FC8-44C0AE993F62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0ED5F5E-246D-4D28-9FC8-44C0AE993F62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0ED5F5E-246D-4D28-9FC8-44C0AE993F62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{976C2492-E6D6-420B-BE61-DE5528FDD043}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{976C2492-E6D6-420B-BE61-DE5528FDD043}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{976C2492-E6D6-420B-BE61-DE5528FDD043}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{976C2492-E6D6-420B-BE61-DE5528FDD043}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

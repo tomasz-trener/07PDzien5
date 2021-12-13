@@ -1,7 +1,7 @@
 ﻿
 namespace P05AplikacjaZawodnicy
 {
-    partial class Form1
+    partial class FrmZawodnicy
     {
         /// <summary>
         /// Required designer variable.
@@ -46,6 +46,7 @@ namespace P05AplikacjaZawodnicy
             this.txtWzrost = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.dtpDataUr = new System.Windows.Forms.DateTimePicker();
+            this.btnTrener = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbDane
@@ -194,11 +195,22 @@ namespace P05AplikacjaZawodnicy
             this.dtpDataUr.Size = new System.Drawing.Size(140, 20);
             this.dtpDataUr.TabIndex = 17;
             // 
-            // Form1
+            // btnTrener
+            // 
+            this.btnTrener.Location = new System.Drawing.Point(411, 12);
+            this.btnTrener.Name = "btnTrener";
+            this.btnTrener.Size = new System.Drawing.Size(68, 58);
+            this.btnTrener.TabIndex = 18;
+            this.btnTrener.Text = "Trener";
+            this.btnTrener.UseVisualStyleBackColor = true;
+            this.btnTrener.Click += new System.EventHandler(this.btnTrener_Click);
+            // 
+            // FrmZawodnicy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(640, 282);
+            this.Controls.Add(this.btnTrener);
             this.Controls.Add(this.dtpDataUr);
             this.Controls.Add(this.txtWzrost);
             this.Controls.Add(this.label6);
@@ -216,8 +228,8 @@ namespace P05AplikacjaZawodnicy
             this.Controls.Add(this.btnDodaj);
             this.Controls.Add(this.btnWczytaj);
             this.Controls.Add(this.lbDane);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "FrmZawodnicy";
+            this.Text = "Zawodnicy";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,6 +254,7 @@ namespace P05AplikacjaZawodnicy
         private System.Windows.Forms.TextBox txtWzrost;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker dtpDataUr;
+        private System.Windows.Forms.Button btnTrener;
     }
 }
 

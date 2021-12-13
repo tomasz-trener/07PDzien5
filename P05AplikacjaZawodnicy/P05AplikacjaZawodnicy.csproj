@@ -47,19 +47,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domain\Trener.cs" />
     <Compile Include="Domain\Zawodnik.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="FrmZawodnicy.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FrmZawodnicy.Designer.cs">
+      <DependentUpon>FrmZawodnicy.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\PolaczenieZBaza.cs" />
+    <Compile Include="Repositories\TrenerzyRepository.cs" />
     <Compile Include="Repositories\ZawodnicyRepository.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FrmTrener.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTrener.Designer.cs">
+      <DependentUpon>FrmTrener.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FrmZawodnicy.resx">
+      <DependentUpon>FrmZawodnicy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -70,6 +78,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FrmTrener.resx">
+      <DependentUpon>FrmTrener.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

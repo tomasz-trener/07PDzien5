@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace P05AplikacjaZawodnicy
 {
-    public partial class Form1 : Form
+    public partial class FrmZawodnicy : Form
     {
-        public Form1()
+        public FrmZawodnicy()
         {
             InitializeComponent();
         }
@@ -83,6 +83,23 @@ namespace P05AplikacjaZawodnicy
             ZawodnicyRepository zr = new ZawodnicyRepository();
             zr.UsunZawodnika(z.Id_zawodnika);
             Odswiez();
+        }
+
+        private void btnTrener_Click(object sender, EventArgs e)
+        {
+            Zawodnik z = (Zawodnik)lbDane.SelectedItem;
+
+            TrenerzyRepository tr = new TrenerzyRepository();
+            if (z.Id_trenera==null)
+            {
+                MessageBox.Show("Ten zawodnik nie ma trenera", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            Trener t= tr.PobierzTrenera((int)z.Id_trenera);
+
+            FrmTrener frmTrener = new FrmTrener(t);
+            frmTrener.Show();
         }
     }
 }
